@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="responsive/responsive.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="icon" href="img/j.png">
+	<script src="https://kit.fontawesome.com/8b134085b2.js" crossorigin="anonymous"></script>
+	<title>Portfolio</title>
+
+</head>
+
+<body style="background-color: #1F1F1F;color: white;">
+
+	<!-- color change -->
+
+	<div>
+		<div class="color-change d-sm-none">
+			<ul class="col-sm-10 col-lg-9">
+				<li class=""> Colors</li>
+				<li onclick="green()" class=" li li-sm green"></li>
+				<li onclick="yellow()" class=" li li-sm yellow"></li>
+				<li onclick="orange()" class=" li li-sm orange"></li>
+				<li onclick="sky()" class=" li li-sm sky"></li>
+				<li onclick="gray()" class=" li li-sm gray"></li>
+				<li onclick="blue()" class=" li li-sm blue"></li>
+				<li onclick="red()" class=" li li-sm red"></li>
+				<li onclick="rose()" class=" li li-sm rose"></li>
+			</ul>
+		</div>
+		<div class="bg-white d-sm-none" onclick="color()"></div>
+	</div>
+
+	<div class="row">
+		<div class="d-sm-none d-lg-block col-lg-3">
+			<div class="col-lg-3" style="position: fixed; top: 0px;" data-aos="fade-right"
+				data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1500">
+				<div class=" profile">
+
+					<i class="bi bi-gear setting" onclick="color()"></i>
+
+					<div style="border: 1px solid #494949; border-radius: 20px;" class="p-sm-1">
+						<div class="m-sm-2">
+							<div class="align-items-center my-sm-2 row justify-sm-between">
+								<h1 id="var_name">Mayur Jadhav</h1>
+								<div>
+									<p id="var_degree">Software</p>
+									<p> Engineer</p>
+								</div>
+							</div>
+							<img src="img/final.JPG" alt="" class="w-sm-100" style="border-radius: 9%;">
+						</div>
+						<div class="text-sm-center">
+							<p class="font-sm-5" id="var_sub1">AI Consultant</p>
+							<p class="font-sm-5" id="var_sub2">Architecture Modelling</p>
+						</div>
+						<p class="text-sm-center my-sm-3" style="color: gray;">© 2024 Mayur Jadhav. All Rights
+							Reserved</p>
+						<div class="row justify-sm-center">
+							<ul class="icons-social">
+								<li><a href="#" id="var_linkedin"><i
+											class="bi bi-linkedin"></i></a></li>
+								<li><a href="https://github.com/m-spunky" id="var_github"><i class="bi bi-github"></i></a></li>
+								<li><a href="tel:+918779374166" id="var_mobile"><i class="bi bi-telephone"></i></a></li>
+								<li><a href="mailto:mayurdjadhav1@gmail.com" id="var_email"><i class="bi bi-envelope-at"></i></a>
+								</li>
+							</ul>
+						</div>
+						<div class="hire mt-sm-2 mx-sm-4">
+							<a href="./resume/resume.pdf" download="resume.pdf"><i
+									class="bi bi-arrow-right-circle"></i> Download CV</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ......................................................................................................................-->
+
+
+		<div class="col-lg-8">
+			<div class="container w-lg-90 w-sm-95">
+
+				<div class=" mx-sm-2 d-sm-block d-lg-none">
+					<div style="border: 1px solid #494949;border-radius: 6%;">
+						<i class="bi bi-gear setting2" onclick="color()"></i>
+
+						<div class="m-sm-3">
+							<div class="align-items-center my-sm-2 row justify-sm-between">
+								<h1 class="display-sm-2">Jeffin Dericks</h1>
+								<div class="display-sm-5">
+									<p class="font-sm-13 font-md-13 font-lg-13">Full-Stack</p>
+									<p> Developer</p>
+								</div>
+							</div>
+							<img src="img/final.JPG" alt="" class="w-sm-100" style="border-radius: 9%;">
+						</div>
+						<div class="text-sm-center">
+							<p class="display-sm-3" id="var_sub3">AI Consultant</p>
+							<p class="display-sm-3" id="var_sub4">Architecture Modelling</p>
+						</div>
+						<p class="text-sm-center my-sm-5 font-sm-13" style="color: gray;">© 2024 Mayur Jadhav. All
+							Rights
+							Reserved</p>
+						<div class="row justify-sm-center my-sm-5">
+							<ul class="icons-social icons-social-sm icons-social-md">
+								<li><a href=""><i class="bi bi-linkedin"></i></a></li>
+								<li><a href=""><i class="bi bi-github"></i></a></li>
+								<li><a href=""><i class="bi bi-telephone"></i></a></li>
+								<li><a href=""><i class="bi bi-envelope-at"></i></a></li>
+							</ul>
+						</div>
+						<div class="hire mt-sm-5 mx-sm-5 my-sm-2">
+							<a href="" class="py-sm-4 display-sm-4"><i class="bi bi-arrow-right-circle"></i> Download
+								CV</a>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- .........................menu........................................ -->
+				<div class="d-lg-none">
+					<div class="menu-bar" onclick="menu()"><i class="bi bi-list"></i></div>
+					<div class="navbar col-sm-10 vh-sm-100 display-sm-3 d-sm-none px-sm-5">
+						<ul>
+							<li><i class="bi bi-x-lg" onclick="menu()"></i></li>
+							<li onclick="menu()"><a href="#introduce"><i class="bi bi-house-door"></i><span>
+										HOME</span></a></li>
+							<li onclick="menu()"><a href="#about"><i class="bi bi-person"></i><span>ABOUT</span></a>
+							</li>
+							<li onclick="menu()"><a href="#education"><i
+										class="bi bi-mortarboard"></i><span>EDUCATION</span></a></li>
+							<li onclick="menu()"><a href="#skill"><i
+										class="bi bi-bar-chart-line-fill"></i><span>SKILL</span></a></li>
+							<li onclick="menu()"><a href="#project"><i class="bi bi-eye"></i><span></span></a>PROJECT
+							</li>
+							<li onclick="menu()"><a href="#contact"><i
+										class="bi bi-telephone-plus"></i><span>CONTACT</span></a></li>
+						</ul>
+					</div>
+					<div class="back d-sm-none" onclick="menu()"></div>
+				</div>
+
+
+				<!-- ...............................introduce........................................... -->
+
+				<section id="introduce" class="mb-sm-5 py-sm-3" data-aos="fade-up"
+					data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+					<div>
+						<div class="intro my-sm-5">
+							<div>
+								<i class="bi bi-house-door"></i> <span class="ps-lg-1 ps-sm-5">INTRODUCE</span>
+							</div>
+						</div>
+						<h1 class="display-sm-1">Hi there, I'm <br> <Span style="color: var(--green);">Mayur Jadhav</Span>, <br>Software Developer</h1>
+						<p class="mt-sm-5" style="color: gray; font-size: 25px;" id="var_intro">
+							Meet Mayur Jadhav, in the coding sphere,<br>
+							Digital maestro, where innovation steers. <br>
+							In the digital symphony, where rhymes and logic cheers.</p>
+					</div>
+
+				</section>
+
+				<!-- .........................................About........................................... -->
+
+				<section id="about" class="my-sm-5 py-sm-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+					data-aos-duration="1500">
+					<div>
+						<div class="my-sm-5 about">
+							<div><i class="bi bi-person"></i> <span class="ps-lg-1 ps-sm-5">ABOUT</span></div>
+						</div>
+						<h1 class="display-sm-4">"<span style="color: var(--green);">Code</span>: The art of making the
+							complex seem <span style="color: var(--green);">simple</span>."</h1>
+						<p style="color: gray; font-size: 25px;" class="my-sm-5">Dynamic and results-oriented third-year student with a proven track record in machine learning
+							and deep learning with hands-on experience <br>in computer vision and app development.<br><br>
+							Seeking an internship opportunity in a forward-thinking multinational corporation to apply technical skills
+							and contribute to cutting-edge AI projects. </p>
+					</div>
+
+				</section>
+
+				<!-- ........................................education............................. -->
+
+				<section id="education" class="my-sm-5 py-sm-3" data-aos="fade-up"
+					data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+					<div>
+						<div class="education">
+							<div>
+								<i class="bi bi-mortarboard"></i><span class="ps-lg-1 ps-sm-5">EDUCATION</span>
+							</div>
+						</div>
+						<h1 class="display-sm-4 my-sm-5" style="color: var(--green);">Education</h1>
+						<div class="ps-sm-5" style="border-left:1px solid gray ;">
+							<!-- <div class="my-sm-5 ball">
+								<div>
+									<p style="color: gray;">2021 - 2023</p>
+									<p class="font-sm-7">Master of Science in Physics</p>
+									<p style="color: gray; font-size: 20px;">Bishop Heber College, Trichy</p>
+								</div>
+							</div> -->
+							<div class="my-sm-5 ball">
+								<div>
+									<p style="color: gray;">2022 - 2026</p>
+									<p class="font-sm-7">Bachelor in Artificial Intelligence</p>
+									<p style="color: gray; font-size: 20px;">VES Institute of Technology, Chembur</p>
+								</div>
+							</div>
+							<div class="my-sm-5 ball">
+								<div>
+									<p style="color: gray;">2020 - 2022</p>
+									<p class="font-sm-7">HSC</p>
+									<p style="color: gray; font-size: 20px;">MES Pillai Jr. College,
+										Panvel</p>
+								</div>
+							</div>
+							<div class="my-sm-5 ball">
+								<div>
+									<p style="color: gray;">2010 - 2020</p>
+									<p class="font-sm-7">SSC</p>
+									<p style="color: gray; font-size: 20px;">Shardashram Vidyamandir, Dadar</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- .....................................skill....................................... -->
+
+				<section id="skill" class="my-sm-5 py-sm-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+					data-aos-duration="1500">
+					<div class="d-md-block d-sm-none">
+						<div class="my-sm-5 skill">
+							<div><i class="bi bi-bar-chart-line-fill"></i> <span class="ps-lg-1 ps-sm-5">SKILL</span>
+							</div>
+						</div>
+						<h1 class="display-sm-4">My <span style="color: var(--green);">Skill</span></h1>
+
+						<div class="my-sm-5">
+							<div class="html py-sm-2">
+								<div class="row justify-sm-between font-md-5">
+									<h4>Python</h4>
+									<h4>95%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="css py-sm-2">
+								<div class="row justify-sm-between font-md-5">
+									<h4>HTML, CSS</h4>
+									<h4>90%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="js py-sm-2">
+								<div class="row justify-sm-between font-md-5">
+									<h4>JavaScript</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="html py-sm-2">
+								<div class="row justify-sm-between font-md-5">
+									<h4>React-JS</h4>
+									<h4>75%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="html py-sm-2">
+								<div class="row justify-sm-between font-md-5">
+									<h4>Web Scraping</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="py py-sm-2">
+								<div class="row justify-sm-between  font-md-5">
+									<h4>Tensorflow, Keras</h4>
+									<h4>85%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="css py-sm-2">
+								<div class="row justify-sm-between font-md-5">
+									<h4>Cloud Computing</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="js py-sm-2">
+								<div class="row justify-sm-between font-md-5">
+									<h4>Linux</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="js py-sm-2">
+								<div class="row justify-sm-between  font-md-5">
+									<h4>Flutter</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="d-sm-block d-md-none">
+						<div class="my-sm-5 skill">
+							<div><i class="bi bi-bar-chart-line-fill"></i> <span class="ps-lg-1 ps-sm-5">SKILL</span>
+							</div>
+						</div>
+						<h1 class="display-sm-4">My <span style="color: var(--green);">Skill</span></h1>
+
+						<div class="my-sm-5">
+							<div class="html py-sm-2 font-sm-13">
+								<div class="row justify-sm-between">
+									<h4>Python</h4>
+									<h4>95%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="css py-sm-2">
+								<div class="row justify-sm-between font-sm-13">
+									<h4>HTML, CSS</h4>
+									<h4>90%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="js py-sm-2">
+								<div class="row justify-sm-between font-sm-13">
+									<h4>JavaScript</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="html py-sm-2">
+								<div class="row justify-sm-between font-sm-13">
+									<h4>React-JS</h4>
+									<h4>75%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="html py-sm-2">
+								<div class="row justify-sm-between font-sm-13">
+									<h4>Web Scraping</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="py py-sm-2">
+								<div class="row justify-sm-between font-sm-13 ">
+									<h4>Tensorflow, Keras</h4>
+									<h4>85%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="css py-sm-2">
+								<div class="row justify-sm-between font-sm-13">
+									<h4>Cloud Computing</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="js py-sm-2">
+								<div class="row justify-sm-between font-sm-13">
+									<h4>Linux</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="my-sm-5">
+							<div class="js py-sm-2">
+								<div class="row justify-sm-between  font-sm-13">
+									<h4>Flutter</h4>
+									<h4>80%</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- ........................................project.................................. -->
+
+				<section id="project" class="my-sm-5 py-sm-3">
+					<div>
+						<div class="my-sm-5 skill">
+							<div><i class="bi bi-bar-chart-line-fill"></i> <span class="ps-lg-1 ps-sm-5">PROJECT</span>
+							</div>
+						</div>
+
+						<h1 class="display-sm-4"><span style="color: var(--green);">Projects</span></h1>
+
+						<!-- <div class="row">
+							<div class="col-sm-12">
+								<div class="rotateLine">
+									<img src="img/jef_black.JPG" alt="" class="w-sm-100"
+										style="visibility: hidden;pointer-events: none;">
+									<div class="project-view">
+										<div>
+											<h2 class="text-sm-center">Library Management</h2>
+											<div class="row align-items-center justify-sm-between mt-sm-2">
+												<a href=""><i class="bi bi-github  font-sm-13"></i></a>
+												<a href=""><i class="bi bi-youtube font-sm-13"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div> -->
+
+						<div class="container">
+							<div class="row">
+
+								<div class="back-end col-sm-12">
+									<h1>IN Work Project</h1>
+								</div>
+								<div class="back-end-projects p-sm-1 col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">Bandersnatch</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Raycasting</h1>
+												<h1><i class="fa-regular fa-star-half"></i>NPC Agents</h1>
+												<!-- <p><i class="fa-regular fa-star-half"></i>SQLite</p> -->
+												<h1><i class="fa-regular fa-star-half"></i>Pygame</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Pseudo3D Env</h1>
+											</div>
+											<div class="git-center">
+												<a href="https://github.com/m-spunky/Bandersnatch"><i
+														class="bi bi-github"></i></a>
+												<!-- <a href=""><i class="bi bi-youtube font-sm-13"></i></a> -->
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="back-end col-sm-12">
+									<h1>Hackathon Projects</h1>
+								</div>
+								<div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">Airtravel</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Flutter</h1>
+												<h1><i class="fa-regular fa-star-half"></i>API</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Realm</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Python</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Figma</h1>
+											</div>
+											<div class="git-center">
+												<a href="https://github.com/m-spunky/TRJ_solution"><i
+														class="bi bi-github git"></i></a>
+												<a href="#"><i class="bi bi-youtube"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">SkillSphere</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Streamlit</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Langchain</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Google Gemini</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Pydantic</h1>
+												<!-- <h1><i class="fa-regular fa-star-half"></i>Tensorflow</h1> -->
+											</div>
+											<div class="git-center">
+												<a href="https://github.com/m-spunky/HackAiThon_solution"><i
+														class="bi bi-github"></i></a>
+												<a href="#"><i class="bi bi-youtube"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">Exagram</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Flask</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Google Gemini</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Firebase</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Tesseract OCR</h1>
+												<!-- <h1><i class="fa-regular fa-star-half"></i>CSS</h1> -->
+											</div>
+											<div class="git-center">
+												<a href="https://github.com/m-spunky/exagramv2"><i
+														class="bi bi-github "></i></a>
+												<a href="#"><i class="bi bi-youtube"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- <div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">Instagram Clone</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Python-Flask</h1>
+												<p><i class="fa-regular fa-star-half"></i>API</p> -->
+												<!-- <h1><i class="fa-regular fa-star-half"></i>SQLite</h1>
+												<h1><i class="fa-regular fa-star-half"></i>HTML</h1>
+												<h1><i class="fa-regular fa-star-half"></i>CSS</h1>
+											</div>
+											<div class="git-center">
+												<a href="https://jeffindericks.github.io/python-insta/"><i
+														class="bi bi-github"></i></a>
+												<a href="https://youtu.be/LVnMZ8qanCA"><i class="bi bi-youtube"></i></a>
+											</div>
+										</div>
+									</div>
+								</div> -->
+
+								<!-- <div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">Facebook Clone</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Python-Flask</h1>
+												<h1><i class="fa-regular fa-star-half"></i>MongoDB</h1>
+												<h1><i class="fa-regular fa-star-half"></i>SQLite</h1>
+												<h1><i class="fa-regular fa-star-half"></i>HTML</h1>
+												<h1><i class="fa-regular fa-star-half"></i>CSS</h1>
+											</div>
+											<div class="git-center">
+												<a href="https://jeffindericks.github.io/python-facebook_clone/"><i
+														class="bi bi-github"></i></a>
+												<a href=""><i class="bi bi-youtube font-sm-13"></i></a> -->
+											<!-- </div>
+										</div>
+									</div>
+								</div> -->
+<!-- 
+								<div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">Youtube Clone</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Python-Flask</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Pytube Package</h1>
+												<h1><i class="fa-regular fa-star-half"></i>SQLite</h1>
+												<h1><i class="fa-regular fa-star-half"></i>HTML</h1>
+												<h1><i class="fa-regular fa-star-half"></i>CSS</h1>
+											</div>
+											<div class="git-center">
+												<a href="https://jeffindericks.github.io/python-youtube/"><i
+														class="bi bi-github"></i></a>
+												<a href=""><i class="bi bi-youtube font-sm-13"></i></a> -->
+											<!-- </div>
+										</div>
+									</div>
+								</div> -->
+
+								<!-- <div class="back-end-projects">
+								<div class="project-animation">
+									<div>
+										<h1 class="text-sm-center">Netflix Clone</h1>
+										<h2 class="tech-stack">Tech-Stack :</h2>
+										<div class="project-flex">
+											<p><i class="fa-regular fa-star-half"></i>Python-Flask</p>
+											<p><i class="fa-regular fa-star-half"></i>Pytube Package</p>
+											<p><i class="fa-regular fa-star-half"></i>SQLite</p>
+											<p><i class="fa-regular fa-star-half"></i>HTML</p>
+											<p><i class="fa-regular fa-star-half"></i>CSS</p>
+										</div>
+										<div class="git-center">
+											<a href=""><i class="bi bi-github  font-sm-13"></i></a>
+											<a href=""><i class="bi bi-youtube font-sm-13"></i></a>
+										</div>
+									</div>
+								</div>
+							</div> -->
+
+								<div class="back-end-mini col-sm-12">
+									<h1>ML Projects</h1>
+								</div>
+								<div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">ChessME</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Jupyter</h1>
+												<h1><i class="fa-regular fa-star-half"></i>CNN</h1>
+												<!-- <h1><i class="fa-regular fa-star-half"></i>SQLite</h1> -->
+												<h1><i class="fa-regular fa-star-half"></i>FEN Dataset</h1>
+												<h1><i class="fa-regular fa-star-half"></i>One-Hot Encoding</h1>
+											</div>
+											<div class="git-center">
+												<a href="https://github.com/m-spunky/ChessME"><i
+														class="bi bi-github "></i></a>
+												<a href="#"><i class="bi bi-youtube font-sm-13"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">GenAI Warehouse</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Langchain</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Agents</h1>
+												<!-- <h1><i class="fa-regular fa-star-half"></i>SQLite</h1> -->
+												<h1><i class="fa-regular fa-star-half"></i>FAISS</h1>
+												<!-- <h1><i class="fa-regular fa-star-half"></i>CSS</h1> -->
+											</div>
+											<div class="git-center">
+												<a href="https://github.com/m-spunky/GenAI"><i
+														class="bi bi-github "></i></a>
+												<a href="#"><i class="bi bi-youtube font-sm-13"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">Snakes</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Pygame</h1>
+												<h1><i class="fa-regular fa-star-half"></i>Geometry</h1>
+												<!-- <h1><i class="fa-regular fa-star-half"></i>SQLite</h1> -->
+												<!-- <h1><i class="fa-regular fa-star-half"></i>HTML</h1> -->
+												<!-- <h1><i class="fa-regular fa-star-half"></i>CSS</h1> -->
+											</div>
+											<div class="git-center">
+												<a href="https://github.com/m-spunky/Snakes/"><i
+														class="bi bi-github"></i></a>
+												<a href="#"><i class="bi bi-youtube font-sm-13"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- <div class="back-end-projects col-sm-12">
+									<div class="project-animation">
+										<div>
+											<h1 class="text-sm-center">Text-To-Speech</h1>
+											<h2 class="tech-stack">Tech-Stack :</h2>
+											<div class="project-flex">
+												<h1><i class="fa-regular fa-star-half"></i>Python-Flask</h1>
+												<h1><i class="fa-regular fa-star-half"></i>GTTS Package</h1>
+												<h1><i class="fa-regular fa-star-half"></i>SQLite</h1>
+												<h1><i class="fa-regular fa-star-half"></i>HTML</h1>
+												<h1><i class="fa-regular fa-star-half"></i>CSS</h1>
+											</div>
+											<div class="git-center">
+												<a href="https://jeffindericks.github.io/python-gtts/"><i
+														class="bi bi-github"></i></a>
+												<a href=""><i class="bi bi-youtube font-sm-13"></i></a>
+											</div>
+										</div>
+									</div>
+								</div> -->
+
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<!-- ..............................................contact....................................... -->
+
+				<section id="contact" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+					data-aos-duration="1500">
+					<div>
+						<div class="my-sm-5 skill">
+							<div><i class="bi bi-telephone-plus"></i> <span class="ps-lg-1 ps-sm-5">CONTACT</span></div>
+						</div>
+						<h1 style="color: var(--green);" class="display-sm-4">Contact</h1>
+						<div class="my-sm-5">
+							<p class="font-sm-5 mt-sm-3">Wanna talk to me ?</p><br>
+							<p class="font-sm-5">"Building bridges through meaningful connections is my passion.
+								<br>Explore my professional narrative, and let's initiate conversations that lead to
+								exciting collaborations. Feel free to reach out for inquiries and partnerships via
+								email, where opportunities await."
+							</p>
+							<!-- <p class="font-sm-5">For inquiries and collaborations, reach out to me via email."</p> -->
+							<div class="mt-sm-2 font-sm-8 last-mail">
+								<a href="mail-to: jeffindericks08@gmail.com"
+									style="text-decoration: none; color: white;"><i class="bi bi-envelope"
+										style="color: var(--green); padding-right: 30px;"></i>
+									<span>mayurdjadhav1@gmail.com</span></a>
+							</div>
+							<div class="mt-sm-1 font-sm-8 last-mail">
+								<a href="tel: +91-8779374166" style="text-decoration: none; color: white;"><i
+										class="bi bi-phone" style="color: var(--green); padding-right: 30px;"></i>
+									<span>+91-8779374166</span></a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<div class="col-lg-1 d-sm-none d-lg-block">
+			<div class="slide-bar col-lg-1" data-aos="fade-left" data-aos-duration="1500">
+				<ul>
+					<li><a href="#introduce" class="home"><i class="bi bi-house-door"></i></a></li>
+					<li><a href="#about" class="person"><i class="bi bi-person"></i></a></li>
+					<li><a href="#education" class="graduate"><i class="bi bi-mortarboard"></i></a></li>
+					<li><a href="#skill" class="line"><i class="bi bi-bar-chart-line-fill"></i></a></li>
+					<li><a href="#project" class="project"><i class="bi bi-eye"></i></a></li>
+					<li><a href="#contact" class="call mb-sm-2"><i class="bi bi-telephone-plus"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="js/js.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,857 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+	user-select: none;
+}
+
+.row1 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--green);
+	border-radius: 50px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+
+
+:root {
+	--green: #28E98C;
+	--black: #1f1f1f;
+	--gray: gray;
+	--border: #494949;
+}
+
+/* .............................................color change........................................ */
+
+
+.color-change {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	background-color: var(--black);
+	z-index: 8;
+}
+
+.bg-white {
+	position: fixed;
+	inset: 0;
+	z-index: 7;
+	background-color: rgba(255, 255, 255, 0.256);
+}
+
+.color-change ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between !important;
+	height: 50vh;
+	align-items: center;
+	list-style-type: none;
+}
+
+
+.color-change ul .li {
+	border-radius: 50%;
+	cursor: pointer;
+	list-style-type: none;
+	width: 40px;
+	height: 40px;
+}
+
+.color-change .green {
+	background-color: #28E98C;
+}
+
+.color-change .yellow {
+	background-color: #E4AF12;
+}
+
+.color-change .orange {
+	background-color: #FE6F1D;
+}
+
+.color-change .sky {
+	background-color: #14C5FD;
+}
+
+.color-change .gray {
+	background-color: #C0C0C0;
+}
+
+.color-change .blue {
+	background-color: #1338F3;
+}
+
+.color-change .red {
+	background-color: #F31313;
+}
+
+.color-change .rose {
+	background-color: #FF99CC;
+}
+
+
+.coloropen {
+	animation: coloropen .2s linear forwards;
+}
+
+.colorclose {
+	animation: colorclose .2s linear forwards;
+}
+
+
+@keyframes coloropen {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+		top: -10%;
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+		top: 0;
+	}
+}
+
+@keyframes colorclose {
+	0% {
+		visibility: visible;
+		opacity: 1;
+		top: 0;
+	}
+
+	100% {
+		visibility: hidden;
+		opacity: 0;
+		top: -10%;
+	}
+}
+
+
+/* ............................................/profile..................................... */
+
+.profile {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.setting {
+	position: absolute;
+	top: 10%;
+	left: -25px;
+	background-color: #1F1F1F !important;
+	color: gray;
+	animation: rotate 3s linear infinite;
+	font-size: 20px;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+.setting2 {
+	position: fixed;
+	top: 5%;
+	left: 5%;
+	font-size: 4.5rem;
+	border: 1px solid var(--border);
+	width: 120px;
+	background-color: var(--black);
+	z-index: 8;
+	height: 120px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 120px;
+
+}
+
+
+
+.icons-social {
+	display: flex;
+	list-style-type: none;
+	align-items: center;
+	padding-left: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.icons-social li a {
+	display: inline-block;
+	border-radius: 50%;
+	border: 2px solid gray;
+	width: 50px;
+	font-size: 25px;
+	line-height: 45px;
+	color: white;
+	height: 50px;
+	text-align: center;
+	transition: all .3s;
+	margin: 0px 5px;
+}
+
+.icons-social li a:hover {
+	border: 2px solid var(--green);
+	transition: all .3s;
+}
+
+.hire {
+	display: flex;
+	justify-content: center;
+}
+
+.hire a {
+	background-color: var(--green);
+	color: black;
+	border: 2px solid var(--green);
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	padding: 10px 0px;
+	transition: all .3s;
+	border-radius: 50px;
+}
+
+.hire a:hover {
+	background-color: transparent;
+	border: 2px solid var(--green);
+	color: var(--green);
+	transition: all .3s;
+}
+
+
+
+/* ...............................................................navbar..................................... */
+
+
+.menu-bar {
+	position: fixed;
+	top: 5%;
+	right: 5%;
+	font-size: 4.5rem;
+	border: 1px solid var(--border);
+	width: 120px;
+	background-color: var(--black);
+	z-index: 10;
+	height: 120px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 120px;
+}
+
+
+.navbar {
+	list-style-type: none;
+	position: fixed;
+	right: 0%;
+	top: 0;
+	background-color: var(--black);
+	z-index: 10;
+}
+
+.navbar ul {
+	list-style-type: none;
+}
+
+.navbar ul li {
+	margin: 5rem 0rem !important;
+}
+
+.navbar li a {
+	color: white;
+	text-decoration: none;
+}
+
+.navbar li span {
+	padding-left: 30px;
+}
+
+.open {
+	animation: open .3s linear forwards;
+}
+
+@keyframes open {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+		right: -10%;
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+		right: 0;
+	}
+}
+
+.back {
+	position: fixed;
+	left: 0px;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	z-index: 9;
+	background-color: #1f1f1fe8;
+}
+
+.close {
+	animation: close .3s linear forwards;
+}
+
+@keyframes close {
+	0% {
+		visibility: visible;
+		opacity: 1;
+		right: 0;
+	}
+
+	100% {
+		visibility: hidden;
+		opacity: 0;
+		right: -10%;
+	}
+}
+
+
+
+/* ..........................................introduce................................................. */
+
+
+
+
+.intro div {
+	border: 1px solid var(--border);
+	display: inline;
+	padding: 10px 20px;
+	border-radius: 50px;
+}
+
+
+/* ........................................about................................................. */
+
+
+.about div {
+	border: 1px solid var(--border);
+	display: inline;
+	padding: 10px 20px;
+	border-radius: 50px;
+}
+
+
+/* ........................................education................................................. */
+
+
+.education div {
+	border: 1px solid var(--border);
+	display: inline;
+	padding: 10px 20px;
+	border-radius: 50px;
+}
+
+.ball {
+	position: relative;
+}
+
+.ball::after {
+	position: absolute;
+	content: "";
+	width: 15px;
+	height: 15px;
+	top: 0px;
+	left: -58px;
+	border-radius: 50%;
+	transition: all .3s;
+	background-color: var(--gray);
+}
+
+.ball:hover.ball::after {
+	background-color: var(--green) !important;
+	transition: all .3s;
+}
+
+/* ........................................skill................................................. */
+
+
+.skill div {
+	border: 1px solid var(--border);
+	display: inline;
+	padding: 10px 20px;
+	border-radius: 50px;
+}
+
+
+.html {
+	border-bottom: 5px solid var(--gray);
+	position: relative;
+}
+
+.html::after {
+	position: absolute;
+	left: 0px;
+	bottom: -5px;
+	width: 75%;
+	height: 5px;
+	content: "";
+	background-color: var(--green);
+}
+
+.html::before {
+	position: absolute;
+	left: 75%;
+	border-radius: 50%;
+	bottom: -9px;
+	width: 12px;
+	height: 12px;
+	content: "";
+	background-color: var(--green);
+	animation: ball 1s linear infinite;
+	box-shadow: 0px 0px 5px var(--green);
+}
+
+.css {
+	border-bottom: 5px solid var(--gray);
+	position: relative;
+}
+
+.css::after {
+	position: absolute;
+	left: 0px;
+	bottom: -5px;
+	width: 70%;
+	height: 5px;
+	content: "";
+	background-color: var(--green);
+}
+
+.css::before {
+	position: absolute;
+	left: 70%;
+	border-radius: 50%;
+	bottom: -9px;
+	width: 12px;
+	height: 12px;
+	content: "";
+	background-color: var(--green);
+	animation: ball 1s linear infinite;
+	box-shadow: 0px 0px 5px var(--green);
+}
+
+.js {
+	border-bottom: 5px solid var(--gray);
+	position: relative;
+}
+
+.js::after {
+	position: absolute;
+	left: 0px;
+	bottom: -5px;
+	width: 50%;
+	height: 5px;
+	content: "";
+	background-color: var(--green);
+}
+
+.js::before {
+	position: absolute;
+	left: 50%;
+	border-radius: 50%;
+	bottom: -9px;
+	width: 12px;
+	height: 12px;
+	content: "";
+	background-color: var(--green);
+	animation: ball 1s linear infinite;
+	box-shadow: 0px 0px 5px var(--green);
+}
+
+.py {
+	border-bottom: 5px solid var(--gray);
+	position: relative;
+}
+
+.py::after {
+	position: absolute;
+	left: 0px;
+	bottom: -5px;
+	width: 55%;
+	height: 5px;
+	content: "";
+	background-color: var(--green);
+}
+
+.py::before {
+	position: absolute;
+	left: 55%;
+	border-radius: 50%;
+	bottom: -9px;
+	width: 12px;
+	height: 12px;
+	content: "";
+	background-color: var(--green);
+	animation: ball 1s linear infinite;
+	box-shadow: 0px 0px 5px var(--green);
+}
+
+@keyframes ball {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+/* .............................................project................................................... */
+
+
+.back-end h1 {
+	color: white;
+	margin-top: 50px;
+	text-align: center;
+}
+
+
+
+.back-end-projects {
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	margin-top: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.project-animation {
+	padding: 30px;
+	/* background-color: var(--gray); */
+	transition: all .5s ease-in-out;
+}
+
+.project-animation:hover .git-center a {
+	transform: rotate(360deg);
+	transition: all .5s ease-in-out;
+}
+
+/* .back-end-projects::after {
+	position: absolute;
+	content: "";
+	top: 0%;
+	left: 0%;
+	width: 5%;
+	height: 10%;
+	background-color: var(--green);
+	animation: project 3s linear infinite;
+	pointer-events: none;
+	z-index: 99;
+} */
+
+/* @keyframes project {
+	0% {
+		left: 0%;
+		top: 0%;
+	}
+
+
+	25% {
+		left: 95%;
+		top: 0%;
+	}
+
+	50% {
+		left: 95%;
+		top: 95%;
+	}
+
+	75% {
+		left: 0%;
+		top: 95%;
+	}
+
+	100% {
+		left: 0%;
+		top: 0%;
+	}
+} */
+
+.project-animation h1 {
+	color: var(--green);
+}
+
+.project-flex {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	margin-top: 20px;
+	/* font-size: 18px; */
+}
+
+.project-flex h1 {
+	color: white;
+}
+
+.git-center {
+	text-align: center;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.git-center a {
+	color: white;
+	border-radius: 50%;
+	border: 2px solid gray;
+	width: 45px;
+	font-size: 30px;
+	line-height: 45px;
+	height: 45px;
+}
+
+.git-center a:hover {
+	border: 1px solid var(--green);
+}
+
+.git-center .bi-youtube {
+	color: red;
+}
+
+
+.tech-stack {
+	color: var(--gray);
+}
+
+.back-end-mini {
+	color: white;
+	margin-top: 30px;
+	text-align: center;
+}
+
+
+
+/* .rotateLine {
+	position: relative;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.rotateLine::after {
+	position: absolute;
+	content: "";
+	top: 0%;
+	left: 0%;
+	width: 20%;
+	height: 20%;
+	background-color: var(--green);
+	animation: project 3s linear infinite;
+	pointer-events: none;
+	z-index: -1;
+}
+
+@keyframes project {
+	0% {
+		left: 0%;
+		top: 0%;
+	}
+
+	25% {
+		left: 80%;
+		top: 0%;
+	}
+
+	50% {
+		left: 80%;
+		top: 80%;
+	}
+
+	75% {
+		left: 0%;
+		top: 80%;
+	}
+
+	100% {
+		left: 0%;
+		top: 0%;
+	}
+}
+
+
+.project-view {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	left: 2%;
+	right: 2%;
+	top: 2%;
+	bottom: 2%;
+	border-radius: 5px;
+	background-color: var(--black);
+}
+
+.project-view .bi-youtube {
+	color: red;
+}
+
+.project-view .bi-github {
+	color: white;
+}
+
+.project-view .row a {
+	width: 70px;
+	height: 70px;
+	border: 2px solid var(--border);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin: 0px 10px;
+	transition: all .3s;
+}
+
+.project-view .row a:hover {
+	border: 2px solid var(--green);
+	transition: all .3s;
+} */
+
+/* ................................slide bar.................................................. */
+
+
+
+
+.slide-bar {
+	position: fixed;
+	top: 25%;
+}
+
+.slide-bar ul {
+	list-style-type: none;
+	border: 1px solid #494949;
+	display: inline-block;
+	padding: 10px;
+	border-radius: 25px;
+}
+
+.slide-bar ul li a {
+	color: #494949;
+	font-size: 20px;
+	margin-top: 20px;
+	transition: all .3s;
+	display: inline-block;
+}
+
+.slide-bar ul li a:hover {
+	transform: scale(1.1);
+	transition: all .3s;
+	color: var(--green);
+}
+
+.home,
+.call,
+.person,
+.graduate,
+.line,
+.project {
+	position: relative;
+}
+
+.home::after,
+.call::after,
+.person::after,
+.graduate::after,
+.line::after,
+.project::after {
+	position: absolute;
+	background-color: var(--green);
+	font-size: 15px;
+	color: black;
+	padding: 3px 10px;
+	border-radius: 5px;
+	right: 150%;
+	opacity: 0;
+	transition: all .3s;
+	pointer-events: none;
+	z-index: 5;
+}
+
+.home::after {
+	content: "Home";
+}
+
+.call::after {
+	content: "Contact";
+}
+
+.person::after {
+	content: "About";
+}
+
+.graduate::after {
+	content: "Education";
+}
+
+.line::after {
+	content: "Skill";
+}
+
+.project::after {
+	content: "Project";
+}
+
+.home:hover::after,
+.call:hover::after,
+.line:hover::after,
+.graduate:hover::after,
+.person:hover::after,
+.project:hover:after {
+	transition: all .3s;
+	opacity: 1;
+}
+
+.last-mail a span{
+	transition: color 0.3s;
+}
+
+
+.last-mail a span:hover {
+	color: var(--green);
+	transition: color 0.3s;
+}
