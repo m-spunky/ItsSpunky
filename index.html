@@ -911,29 +911,40 @@
 		};
 	</script>
 	<style>
-		.education-point {
+		.education-point, .experience-point {
 			position: relative;
 			cursor: pointer;
 			display: flex;
 			align-items: flex-start;
 			flex-direction: column;
 			gap: 20px;
+			padding: 20px;
+			background: #2a2a2a;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
 		}
 
-		.education-point > div:first-child {
+		.education-point:hover, .experience-point:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+		}
+
+		.education-point > div:first-child, .experience-point > div:first-child {
 			flex: 1;
+			width: 100%;
 		}
 
 		.bullet-points {
 			display: none;
 			position: relative;
-			background-color: #2a2a2a;
+			background-color: #333;
 			padding: 20px;
 			border-radius: 8px;
 			box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 			z-index: 1;
 			width: 100%;
-			margin-left: 20px;
+			margin-top: 15px;
 		}
 
 		.bullet-points ul {
@@ -959,25 +970,89 @@
 			font-size: 20px;
 		}
 
-		.education-point:hover .bullet-points {
+		.education-point:hover .bullet-points,
+		.experience-point:hover .bullet-points {
 			display: block;
 			animation: fadeIn 0.3s ease-in-out;
 		}
 
 		@keyframes fadeIn {
-			from { opacity: 0; transform: translateX(-10px); }
-			to { opacity: 1; transform: translateX(0); }
+			from { opacity: 0; transform: translateY(-10px); }
+			to { opacity: 1; transform: translateY(0); }
 		}
 
+		/* Timeline styling */
+		.ps-sm-5[style*="border-left"] {
+			padding-left: 20px !important;
+			border-left: 2px solid var(--green) !important;
+			position: relative;
+		}
+
+		.ball {
+			position: relative;
+			padding-left: 20px;
+		}
+
+		.ball::before {
+			content: '';
+			position: absolute;
+			left: -10px;
+			top: 0;
+			width: 20px;
+			height: 20px;
+			background: var(--green);
+			border-radius: 50%;
+			transform: translateX(-50%);
+		}
+
+		/* Responsive adjustments */
 		@media (max-width: 768px) {
-			.education-point {
-				flex-direction: column;
+			.education-point, .experience-point {
+				padding: 15px;
+				margin-bottom: 15px;
 			}
-			
+
+			.ps-sm-5[style*="border-left"] {
+				padding-left: 15px !important;
+			}
+
 			.bullet-points {
-				width: 100%;
-				margin-left: 0;
-				margin-top: 15px;
+				padding: 15px;
+			}
+
+			.bullet-points li {
+				font-size: 14px;
+				padding-left: 20px;
+			}
+
+			.ball::before {
+				width: 15px;
+				height: 15px;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.education-point, .experience-point {
+				padding: 10px;
+				margin-bottom: 10px;
+			}
+
+			.ps-sm-5[style*="border-left"] {
+				padding-left: 10px !important;
+			}
+
+			.bullet-points {
+				padding: 10px;
+			}
+
+			.bullet-points li {
+				font-size: 13px;
+				padding-left: 15px;
+			}
+
+			.ball::before {
+				width: 12px;
+				height: 12px;
 			}
 		}
 
@@ -1091,71 +1166,6 @@
 				font-size: 2rem;
 				width: 50px;
 				height: 50px;
-			}
-		}
-
-		.experience-point {
-			position: relative;
-			cursor: pointer;
-			display: flex;
-			align-items: flex-start;
-			flex-direction: column;
-			gap: 20px;
-		}
-
-		.experience-point > div:first-child {
-			flex: 1;
-		}
-
-		.experience-point .bullet-points {
-			display: none;
-			position: relative;
-			background-color: #2a2a2a;
-			padding: 20px;
-			border-radius: 8px;
-			box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-			z-index: 1;
-			width: 100%;
-			margin-left: 20px;
-		}
-
-		.experience-point .bullet-points ul {
-			list-style-type: none;
-			padding: 0;
-			margin: 0;
-		}
-
-		.experience-point .bullet-points li {
-			color: #fff;
-			padding: 8px 0;
-			font-size: 16px;
-			position: relative;
-			padding-left: 25px;
-			line-height: 1.4;
-		}
-
-		.experience-point .bullet-points li:before {
-			content: "•";
-			color: var(--green);
-			position: absolute;
-			left: 0;
-			font-size: 20px;
-		}
-
-		.experience-point:hover .bullet-points {
-			display: block;
-			animation: fadeIn 0.3s ease-in-out;
-		}
-
-		@media (max-width: 768px) {
-			.experience-point {
-				flex-direction: column;
-			}
-			
-			.experience-point .bullet-points {
-				width: 100%;
-				margin-left: 0;
-				margin-top: 15px;
 			}
 		}
 
